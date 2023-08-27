@@ -1,4 +1,4 @@
-import useColorSchemes from "../../Hooks/useColorSchemes";
+import useThemeColor from "../../Hooks/useThemeColor";
 import { IApp, IThemedComponent } from "../../Interfaces";
 import { View } from 'react-native'
 
@@ -10,7 +10,7 @@ export type ContainerSpaceBetween = IContainer & {
 
 export const ContainerFlex = (props: IContainer) => {
     const { style, ...otherProps } = props
-    const { background } = useColorSchemes()
+    const { background } = useThemeColor()
     const styles: IContainer['style'] = {
         backgroundColor: background,
         flex: 1
@@ -20,7 +20,7 @@ export const ContainerFlex = (props: IContainer) => {
 
 export const ContainerBlock = (props: IContainer) => {
     const { style, ...otherProps } = props
-    const { background2 } = useColorSchemes()
+    const { background2 } = useThemeColor()
     const styles: IContainer['style'] = {
         backgroundColor: background2,
         padding: 10
@@ -30,7 +30,7 @@ export const ContainerBlock = (props: IContainer) => {
 
 export const ContainerSpaceBetween = (props: ContainerSpaceBetween) => {
     const { style, justify = 'space-between', align, ...otherProps } = props
-    const { background2 } = useColorSchemes()
+    const { background2 } = useThemeColor()
     const styles: IContainer['style'] = {
         backgroundColor: background2,
         padding: 10,

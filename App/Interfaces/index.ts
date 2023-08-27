@@ -4,37 +4,24 @@ export interface IThemedComponent {
     isVisible?: boolean
 }
 
+export interface IColors {
+    background: string
+    headerBackground: string
+    text: string
+    headline: string
+    primary: string
+    secondary: string
+    accent: string
+    success: string
+    error: string
+    warning: string
+    background2: string
+}
+
+// Interface for defining themes
 export interface ITheme {
-    light: {
-        background: string
-        textColor: string
-        headlineColor: string
-        primaryColor: string
-        secondaryColor: string
-        accentColor: string
-        sucessColor: string
-        errorColor: string
-        warningColor: string
-        elevation: number
-        borderRadius: number
-        background2: string
-        opacity: number
-    }
-    dark: {
-        background: string
-        textColor: string
-        headlineColor: string
-        primaryColor: string
-        secondaryColor: string
-        accentColor: string
-        sucessColor: string
-        errorColor: string
-        warningColor: string
-        elevation: number
-        borderRadius: number
-        background2: string
-        opacity: number
-    }
+    light: IColors
+    dark: IColors
 }
 
 export interface IApp {
